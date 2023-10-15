@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Barlow" sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+li{
+  margin: 1rem 0;
+  width: 55%;
+}
+
+.blue-glassmorphism {
+  background: #112131 ;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+/* white glassmorphism */
+.white-glassmorphism {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.white-glassmorphism:hover{
+  border: 2px solid rgb(200, 200, 200);
+  box-shadow:  20px 20px 60px #bebebe,
+}
+
+
+.secondAnimation {
+  --hoverContorno: #959595;
+}
+
+.secondAnimation:hover,
+.secondAnimation:focus {
+  -webkit-animation: cardAnimacion 1.4s;
+  animation: cardAnimacion 1.4s;
+  box-shadow: 0 0 0 0.8em rgba(255, 255, 255, 0);
+  border-radius: 20px;
+}
+
+@-webkit-keyframes cardAnimacion {
+  0% {
+    box-shadow: 0 0 0 0 var(--hoverContorno);
+  }
+}
+
+@keyframes cardAnimacion {
+  0% {
+    box-shadow: 0 0 0 0 var(--hoverContorno);
+  }
+}
+
+
+@media screen and (max-width: 720px) {
+  li{
+    width: 100%;
+  }
+}
